@@ -179,7 +179,7 @@ jobs:
         env:
           RUST_BACKTRACE: 1
         with:
-          rust-toolchain: nightly
+          rust-toolchain: stable
           target: x86_64
           manylinux: auto
           rustup-components: rust-std rustfmt # Keep them in one line due to https://github.com/PyO3/maturin-action/issues/153
@@ -217,8 +217,8 @@ jobs:
         env:
           RUST_BACKTRACE: 1
         with:
-          rust-toolchain: nightly
-          target: aarch64
+          rust-toolchain: stable
+          target: aarch64-unknown-linux-gnu
           # Use manylinux_2_28-cross because the manylinux2014-cross has GCC 4.8.5, which causes the build to fail
           manylinux: 2_28
           rustup-components: rust-std rustfmt # Keep them in one line due to https://github.com/PyO3/maturin-action/issues/153
